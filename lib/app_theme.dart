@@ -110,15 +110,15 @@ horizontal: -4,
  ),
  ),
 
-// dividerTheme: DividerThemeData(
+ dividerTheme: DividerThemeData(
 
-// thickness: 1,
+thickness: 1,
 
-// space: 1,
+space: 1,
 
-// color: appTheme.gray900.withOpacity(0.5),
+ color: appTheme.gray900.withOpacity(0.5),
 
-// ),
+),
 
 );
 
