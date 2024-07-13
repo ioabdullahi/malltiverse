@@ -55,7 +55,6 @@ ThemeData _getThemeData() {
 var colorScheme = _supportedColorScheme[_appTheme] ?? ColorSchemes.lightCodeColorScheme;
 
 return ThemeData(
-
 visualDensity: VisualDensity.standard,
 colorScheme: colorScheme,
 textTheme: TextThemes.textTheme(colorScheme),
@@ -71,47 +70,45 @@ backgroundColor: Colors.transparent,
 side: BorderSide(
 
 color: appTheme.redA100,
-
 width: 1,
 ),
 shape: RoundedRectangleBorder(
 
 borderRadius: BorderRadius.circular(14),
-
-// visualDensity: const VisualDensity(
-// vertical: -4,
-// horizontal: -4
-// ),
-
-//padding: EdgeInsets.zero,
+),
+visualDensity: const VisualDensity(
+ vertical: -4,
+horizontal: -4
+),
+padding: EdgeInsets.zero,
 
 ),
 ),
 
-// elevatedButtonTheme: ElevatedButtonThemeData(
+elevatedButtonTheme: ElevatedButtonThemeData(
 
-// style: ElevatedButton.styleFrom(
+style: ElevatedButton.styleFrom(
 
-// backgroundColor: appTheme.redA100,
+ backgroundColor: appTheme.redA100,
 
-// shape: RoundedRectangleBorder(
+shape: RoundedRectangleBorder(
 
-// borderRadius: BorderRadius.circular(10)
+borderRadius: BorderRadius.circular(10)
 
-// ),
+),
 
-// visualDensity: const VisualDensity(
+visualDensity: const VisualDensity(
 
-// vertical: -4,
+ vertical: -4,
 
-// horizontal: -4,
+horizontal: -4,
 
-// ),
+),
 
-// padding: EdgeInsets.zero,
+ padding: EdgeInsets.zero,
 
-// ),
-// ),
+ ),
+ ),
 
 // dividerTheme: DividerThemeData(
 
@@ -122,7 +119,7 @@ borderRadius: BorderRadius.circular(14),
 // color: appTheme.gray900.withOpacity(0.5),
 
 // ),
-),
+
 );
 
 }
