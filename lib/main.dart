@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:malltiverse/app_route.dart';
+import 'package:malltiverse/views/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,12 +13,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      home: SplashScreen(),
       title: 'Malltiverse',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      initialRoute: AppRoute.initialRoute,
     );
   }
 }
