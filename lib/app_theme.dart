@@ -6,13 +6,10 @@ import 'package:flutter/material.dart';
 
 
 
-LightCodeColors get appTheme => ThemeHelper()._getThemeColors(); 
+LightCodeColors get appTheme => ThemeHelper().themeColor(); 
 ThemeData get theme => ThemeHelper().themeData();
 
 /// Helper class for managing themes and colors.
-
-// ignore_for_file: must_be_immutable
-
 // ignore_for_file: must_be_immutable
 
 class ThemeHelper {
@@ -125,7 +122,7 @@ space: 1,
 }
 
 /// Returns the lightCode colors for the current theme. LightCodeColors themeColor() => _getThemeColors();
-
+LightCodeColors themeColor() => _getThemeColors();
 /// Returns the current theme data.
 
 ThemeData themeData() => _getThemeData();
