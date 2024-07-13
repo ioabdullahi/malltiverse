@@ -4,10 +4,12 @@ import 'package:malltiverse/models/product_list_model.dart';
 
 class ProductsController extends GetxController {
   var isLoading = true.obs;
+  var products = <ProductsModel>[].obs;
+  var errorMessage = ''.obs;
+
   var techGadgets = <ProductsModel>[].obs;
   var mensFashion = <ProductsModel>[].obs;
   var womensFashion = <ProductsModel>[].obs;
-  var errorMessage = ''.obs;
 
   @override
   void onInit() {
@@ -19,36 +21,17 @@ class ProductsController extends GetxController {
     try {
       isLoading(true);
       errorMessage('');
-      print('Fetching products...');
       var fetchedProducts = await ApiClient().fetchProducts();
-      print('Products fetched: ${fetchedProducts.length}');
+      products.assignAll(fetchedProducts);
 
-      // Categorize products
-      var techGadgetsList = <ProductsModel>[];
-      var mensFashionList = <ProductsModel>[];
-      var womensFashionList = <ProductsModel>[];
-
-      for (var product in fetchedProducts) {
-        // Assuming each product has a 'categories' field which is a list of strings
-        if (product.categories.contains('Tech Gadgets')) {
-          techGadgetsList.add(product);
-        } else if (product.categories.contains('Men\'s Fashion')) {
-          mensFashionList.add(product);
-        } else if (product.categories.contains('Women\'s Fashion')) {
-          womensFashionList.add(product);
-        }
-      }
-
-      techGadgets.assignAll(techGadgetsList);
-      mensFashion.assignAll(mensFashionList);
-      womensFashion.assignAll(womensFashionList);
-
+      // Assign all products to each category list
+      techGadgets.assignAll(fetchedProducts);
+      mensFashion.assignAll(fetchedProducts);
+      womensFashion.assignAll(fetchedProducts);
     } catch (e) {
-      print('Error fetching products: $e');
       errorMessage('Failed to fetch products. Please try again later.');
     } finally {
       isLoading(false);
-      print('Fetch products completed');
     }
   }
 }

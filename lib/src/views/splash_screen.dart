@@ -4,7 +4,7 @@ import 'package:malltiverse/utils/app__export.dart';
 import 'package:malltiverse/utils/image_constant.dart';
 
 class SplashScreen extends GetWidget<SplashController> {
-  const SplashScreen({Key? key}):super(key: key);
+  const SplashScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -1,26 +1,10 @@
 class ProductsModel {
-   final String name;
-  final String description;
-  final String uniqueId;
-  final String urlSlug;
-  final bool isAvailable;
-  final List<String> categories;
-  final List<String> photos;
-  final double? price;
-  final double rating;
+  final String name;
   final String imageUrl;
-  ProductsModel({
-    required this.name,
-    required this.description,
-    required this.uniqueId,
-    required this.urlSlug,
-    required this.isAvailable,
-    required this.categories,
-    required this.photos,
-    required this.price,
-    required this.rating,
-    required this.imageUrl,
-  });
+  final String description;
+  final double price;
+
+  ProductsModel({required this.name, required this.imageUrl, required this.description, required this.price});
 
   factory ProductsModel.fromJson(Map <String, dynamic> json){
 
@@ -37,17 +21,9 @@ class ProductsModel {
 
     return ProductsModel(
       name: json['name'],
-      uniqueId: json['unique_id'] ?? '',
-      urlSlug: json['url_slug'] ?? '',
       description: json['description'] ?? 'No description available',
       imageUrl: imageUrl,
       price: price,
-     // rating: json['rating'] ?? 0.0,
-      isAvailable: json['is_available'] ?? false,
-      categories: List<String>.from(json['categories'] ?? []),
-      photos: List<String>.from(json['photos'] ?? []),
-      rating: json['rating'] != null ? double.tryParse(json['rating'].toString()) ?? 0.0 : 0.0,
-
     );
   
   }

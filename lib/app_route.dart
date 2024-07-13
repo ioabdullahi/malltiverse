@@ -1,3 +1,4 @@
+import 'package:malltiverse/src/views/product_list_screen.dart';
 import 'package:malltiverse/utils/app__export.dart';
 import 'package:malltiverse/src/views/splash_screen.dart';
 
@@ -11,7 +12,7 @@ class AppRoute {
   static const String initialRoute = '/initial_route';
 
   static List<GetPage> pages = [
-    GetPage(name: splashScreen, page: () => SplashScreen()),
+    GetPage(name: productListScreen, page: () => ProductListScreen()),
     GetPage(name: initialRoute, page: () => SplashScreen()),
   ];
 }

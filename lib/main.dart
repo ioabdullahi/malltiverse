@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:malltiverse/app_route.dart';
+import 'package:malltiverse/src/views/product_list_screen.dart';
 import 'package:malltiverse/src/views/splash_screen.dart';
 
 void main() {
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: SplashScreen(),
+      home: ProductListScreen(),
       title: 'Malltiverse',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
