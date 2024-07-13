@@ -204,15 +204,18 @@ Color get blueGray900 => Color(0XFF292D32);
 
 //GrayAa
 
-//Color get gray200Aa => Color(OXAAECECEC);
+Color get Gray200Aa => Color(0XAAECECEC);
+
 
 //Gray
 
 Color get gray400 => Color(0XFFB1B181);
 
-//Color get gray40001 => Color(OXFFBBBBBB);
 
-//Color get gray50 => Color(OXFFFAFAFA);
+Color get primaryColor => Color (0XFFFAFAFA);
+
+Color get gray40001 => Color (0XFFBBBBBB);
+
 
 Color get gray500 => Color (0XFF979797);
 

@@ -1,5 +1,5 @@
 import 'package:malltiverse/utils/app__export.dart';
-import 'package:malltiverse/views/splash_screen.dart';
+import 'package:malltiverse/src/views/splash_screen.dart';
 
 class AppRoute {
   static const String checkoutScreen = '/checkout_screen';

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:malltiverse/app_route.dart';
-import 'package:malltiverse/views/splash_screen.dart';
+import 'package:malltiverse/src/views/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());

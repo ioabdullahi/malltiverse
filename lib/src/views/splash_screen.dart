@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:malltiverse/controllers/splash_screen_controller.dart';
+import 'package:malltiverse/src/controllers/splash_screen_controller.dart';
 import 'package:malltiverse/utils/app__export.dart';
+import 'package:malltiverse/utils/image_constant.dart';
 
 class SplashScreen extends GetWidget<SplashController> {
   const SplashScreen({Key? key}):super(key: key);
@@ -8,18 +9,22 @@ class SplashScreen extends GetWidget<SplashController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 255, 255, 255),
+      backgroundColor: appTheme.primaryColor,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset('assets/images/Malltiverse-Logo.png'),
+           CustomImageView(
+            imagePath: ImageConstant.mallTiverseLogo,
+            width: 233.0,
+            height: 33.0,
+           ),
             SizedBox(height: 20),
             Text(
               'Welcome to Malltiverse',
               style: TextStyle(
-                color: Colors.white,
-                fontSize: 24,
+                color: appTheme.redA100,
+                fontSize: 14,
                 fontWeight: FontWeight.bold,
               ),
               textAlign: TextAlign.center,
