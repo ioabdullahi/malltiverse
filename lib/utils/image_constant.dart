@@ -35,7 +35,7 @@ static String img3112x102 = '$imagePath/img_3_112x102.png';
 static String imgA4a41a046cc04 = '$imagePath/img_a4a41a04_6cc0_4.png';
 
 //Splash Screen
-static String mallTiverseLogo = '$imagePath/malltiverse.png';
+static String mallTiverseLogo = '$imagePath/Malltiverse-logo.png';
 //Mobile App - Product List Two images
 
 static String imgFc32b89389464 = '$imagePath/img_fc32b893_b946_4.png';

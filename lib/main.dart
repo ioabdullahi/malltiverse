@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:malltiverse/app_route.dart';
 import 'package:malltiverse/src/views/product_list_screen.dart';
-import 'package:malltiverse/src/views/splash_screen.dart';
+import 'package:malltiverse/utils/app__export.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +12,8 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
       home: ProductListScreen(),
       title: 'Malltiverse',
       theme: ThemeData(
