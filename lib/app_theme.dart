@@ -216,6 +216,7 @@ Color get primaryColor => Color (0XFFFAFAFA);
 
 Color get gray40001 => Color (0XFFBBBBBB);
 
+Color get gray50 => Color (0XFFFAFAFA);
 
 Color get gray500 => Color (0XFF979797);
 

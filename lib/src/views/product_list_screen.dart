@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:malltiverse/app_theme.dart';
 import 'package:malltiverse/models/product_list_model.dart';
 import 'package:malltiverse/src/controllers/product_list_controller.dart';
+import 'package:malltiverse/utils/app__export.dart';
 import 'package:malltiverse/utils/image_constant.dart';
 import 'package:malltiverse/widgets/custom_bottom_navigation_bar.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -28,22 +30,22 @@ class _ProductListScreenState extends State<ProductListScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         leading: Padding(
-          padding: EdgeInsets.only(left: 24.0),
+          padding: EdgeInsets.only(left: 24.0, top: 8.0, bottom: 8.0),
           child: Image.asset(
             ImageConstant.mallTiverseLogo,
             height: 31.0,
             width: 99.0,
           ),
         ),
-        title: Center(
-            child: Text(
+        title: Text(
           'Product List',
           style: TextStyle(
               fontFamily: 'Montserrat',
               fontSize: 19.0,
               fontWeight: FontWeight.w600),
-        )),
+        ),
       ),
       body: Obx(() {
         if (controller.isLoading.value) {
@@ -87,13 +89,49 @@ class _ProductListScreenState extends State<ProductListScreen> {
   }
 
   Widget buildPromoBanner() {
-    return Padding(
-      padding: const EdgeInsets.all(16.0),
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(10),
-        child: Image.network(
-          'https://via.placeholder.com/600x200',
-          fit: BoxFit.cover,
+    return SizedBox(
+      width: double.maxFinite,
+      child: Card(
+        clipBehavior: Clip.antiAlias,
+        elevation: 0,
+        margin: EdgeInsets.only(left: 24.0, right: 24.0),
+        color: appTheme.gray400,
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadiusStyle.roundedBorder10),
+        child: Container(
+          height: 232.0,
+          width: double.maxFinite,
+          decoration: AppDecoration.fillGray400
+              .copyWith(borderRadius: BorderRadiusStyle.roundedBorder10),
+          child: Stack(
+            alignment: Alignment.center,
+            children: [
+              CustomImageView(
+                imagePath: ImageConstant.imgHeadphonesNew,
+                height: 338.0,
+                width: double.maxFinite,
+                radius: BorderRadius.circular(10.0),
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 26.0),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Premium Sound, \nPremium Savings',
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                      style: CustomTextStyles.titleLargeGray50.copyWith(height: 1.40),
+                    ),
+                    SizedBox(height: 6.0,),
+                    Text('Limited offer, hope on and get yours now',
+                    style: CustomTextStyles.labelLargeGray50,)
+                  ],
+                ),
+                ),
+            ],
+          ),
         ),
       ),
     );
@@ -138,7 +176,10 @@ class _ProductListScreenState extends State<ProductListScreen> {
             padding: const EdgeInsets.symmetric(horizontal: 16.0),
             child: Text(
               categoryName,
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                  fontFamily: 'Montserrat',
+                  fontSize: 20,
+                  fontWeight: FontWeight.w600),
             ),
           ),
           SizedBox(height: 8),
