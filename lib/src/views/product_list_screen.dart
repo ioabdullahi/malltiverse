@@ -186,7 +186,7 @@ class _ProductListScreenState extends State<ProductListScreen> {
           CarouselSlider(
             items: pages,
             options: CarouselOptions(
-              height: 400,
+              height: 246.92,
               autoPlay: true,
               enlargeCenterPage: true,
               viewportFraction: 0.9,
@@ -206,20 +206,22 @@ class _ProductListScreenState extends State<ProductListScreen> {
 
   Widget buildProductCard(ProductsModel product) {
     return Card(
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(10),
-      ),
+      // shape: RoundedRectangleBorder(
+      //   borderRadius: BorderRadius.circular(10),
+      // ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Expanded(
-            child: ClipRRect(
-              borderRadius: BorderRadius.vertical(top: Radius.circular(10)),
+            child: Container(
+              height: 185.0,
+              width: 185.0,
+              color: appTheme.gray40001,
               child: Image.network(
                 product.imageUrl.isNotEmpty
                     ? product.imageUrl
                     : 'https://via.placeholder.com/150',
-                fit: BoxFit.cover,
+                //fit: BoxFit.cover,
                 errorBuilder: (context, error, stackTrace) => Icon(Icons.error),
               ),
             ),
