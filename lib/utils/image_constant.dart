@@ -71,7 +71,7 @@ static String img469146b9Ac3b4 = '$imagePath/img_469146b9_ac3b_4.png';
 
 static String imgThumbsUpGray502 = '$imagePath/img_thumbs_up_gray_50_2.svg';
 
-static String imgHeadphonesNew = '$imagePath/Headphones.jpeg';
+static String imgHeadphonesNew = '$imagePath/Image-Card.jpg';
 
 static String imageNotFound = 'assets/images/image_not_found.png';
 

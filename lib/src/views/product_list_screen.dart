@@ -154,7 +154,7 @@ class _ProductListScreenState extends State<ProductListScreen> {
             crossAxisCount: 2,
             crossAxisSpacing: 16,
             mainAxisSpacing: 16,
-            childAspectRatio: 2 / 3,
+            childAspectRatio: 185 / 346.92,
           ),
           itemCount: 2,
           itemBuilder: (context, index) {
@@ -186,7 +186,7 @@ class _ProductListScreenState extends State<ProductListScreen> {
           CarouselSlider(
             items: pages,
             options: CarouselOptions(
-              height: 246.92,
+              height: 346.92,
               autoPlay: true,
               enlargeCenterPage: true,
               viewportFraction: 0.9,
@@ -251,13 +251,13 @@ class _ProductListScreenState extends State<ProductListScreen> {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 8.0),
             child: RatingBarIndicator(
-              // rating: product.rating,
+              rating: 5.0,
               itemBuilder: (context, index) => Icon(
                 Icons.star,
                 color: Colors.amber,
               ),
               itemCount: 5,
-              itemSize: 20.0,
+              itemSize: 12.0,
               direction: Axis.horizontal,
             ),
           ),

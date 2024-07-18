@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:malltiverse/widgets/base_button.dart';
 import 'package:malltiverse/utils/app__export.dart';
 
-class CustomElevatedButton extends BaseButton {
-  CustomElevatedButton(
+class CustomOutlinedButton extends BaseButton {
+  CustomOutlinedButton(
       {Key? key,
       this.decoration,
       this.leftIcon,
@@ -37,17 +37,17 @@ class CustomElevatedButton extends BaseButton {
     return alignment != null
         ? Align(
             alignment: alignment ?? Alignment.center,
-            child: buildElevatedButtonWidget,
+            child: buildOutlinedButtonWidget,
           )
-        : buildElevatedButtonWidget;
+        : buildOutlinedButtonWidget;
   }
 
-  Widget get buildElevatedButtonWidget => Container(
+  Widget get buildOutlinedButtonWidget => Container(
         height: this.height ?? 38.0,
         width: this.width ?? double.maxFinite,
         margin: margin,
         decoration: decoration,
-        child: ElevatedButton(
+        child: OutlinedButton(
           style: buttonStyle,
           onPressed: isDisabled ?? false ? null : onPressed ?? () {},
           child: Row(
